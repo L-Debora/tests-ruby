@@ -25,7 +25,7 @@ def array_42(array)
 end
 
 def magic_array(array)
-    array.flatten.sort.map!{|x| x*2}.delete_if{|x| x%3 == 0}.uniq.sort
+    array.flatten.sort.map!{|x| x*2}.delete_if{|x| x%3 == 0}.uniq.sort # map! modifie directement dans l'array
 end
 
 

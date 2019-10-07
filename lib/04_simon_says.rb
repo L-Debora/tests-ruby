@@ -19,6 +19,14 @@ def first_word(string)
 end
 
 def titleize(string)
-    return string.split.each{|word| word.capitalize!}.join(' ')
+    array = string.split.map.with_index do |word, index| #map renvoie un nouveau tableau
+        if (word != 'and' && word != 'the') || index == 0 # index == 0 pour le premier mot du tableau
+            word = word.capitalize
+        else
+            word #renvoie le mot sans modification
+        end
+    end
+
+    return array.join(' ')
 end
 
